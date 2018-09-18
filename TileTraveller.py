@@ -10,7 +10,8 @@ while stadsetning != 3.1:
             print('Not a valid direction!')
             direction = input('Direction: ')
         else:
-            stadsetning = round((1.1 + 0.1),1)
+            if direction == 'N' or direction =='n':
+                stadsetning = round((1.1 + 0.1),1)
     
     if stadsetning == 1.2:
         print('You can travel: (N)orth or (E)ast or (S)outh.')
@@ -54,11 +55,12 @@ while stadsetning != 3.1:
     if stadsetning == 2.1 :
         print('You can travel: (N)orth.')
         direction = str(input('Direction: '))
-        while direction == 's' or direction == 's' or direction == 'W' or direction == 'w' or direction == 'E' or direction == 'e':
+        while direction == 'S' or direction == 's' or direction == 'W' or direction == 'w' or direction == 'E' or direction == 'e':
             print('Not a valid direction!')
             direction = input('Direction: ')
-        else: 
-            stadsetning = round((2.1 + 0.1),1)
+        else:
+            if direction == 'N' or direction 'n':
+                stadsetning = round((2.1 + 0.1),1)
     
     if stadsetning == 2.3:
         print('You can travel: (E)ast or (W)est.')
