@@ -1,102 +1,92 @@
+status=round(1.1, 2)
 
-stadsetning = 1.1
+invalidInput = False
+while 1.1 <= status <= 3.3:
+    if status == 1.1 or status == 2.1:
+        if invalidInput == False:
+            print('You can travel: (N)orth.')
+        direction = str(input('Direction: '))
+        if direction == 'n' or direction == 'N':
+            status = round((status+0.1),2)
+            invalidInput=False
+        else:
+            print('Not a valid direction!')
+            invalidInput=True
+            continue
+    elif status == 3.1:
+        print('Victory!')
+        break
+    elif status == 1.2:
+        if invalidInput == False:
+            print('You can travel: (N)orth or (E)ast or (S)outh.')
+        direction = str(input('Direction: '))
+        if direction == 'n' or direction == 'N':
+            status = round((status+0.1),2)
+            invalidInput=False
+        elif direction == 'e' or direction == 'E':
+            status = round((status+1.0),2)
+            invalidInput=False
+        elif direction == 's' or direction == 'S':
+            status=round((status-0.1),2)
+            invalidInput=False
+        else:
+            print('Not a valid direction!')
+            invalidInput=True 
+            continue
+    elif status == 1.3:
+        if invalidInput == False:
+            print('You can travel: (E)ast or (S)outh.')
+        direction = str(input('Direction: '))
+        if direction == 'e' or direction == 'E':
+            status = round((status+1.0),2)
+            invalidInput=False
+        elif direction == 's' or direction == 'S':
+            status=round((status-0.1),2)
+            invalidInput=False
+        else:
+            print('Not a valid direction!')
+            invalidInput=True 
+            continue
+    elif status == 2.3:
+        if invalidInput == False:
+            print('You can travel: (E)ast or (W)est.')
+        direction = str(input('Direction: '))
+        if direction == 'w' or direction == 'W':
+            status=round((status-1.0),2)
+            invalidInput=False
+        elif direction == 'e' or direction == 'E':
+            status = round((status+1.0),2)
+            invalidInput=False
+        else:
+            print('Not a valid direction!')
+            invalidInput=True 
+            continue
+    elif status == 3.2:
+        if invalidInput == False:
+            print('You can travel: (N)orth or (S)outh.')
+        direction = str(input('Direction: '))
+        if direction == 'n' or direction == 'N':
+            status = round((status+0.1),2)
+            invalidInput=False
+        elif direction == 's' or direction == 'S':
+            status=round((status-0.1),2)
+            invalidInput=False
+        else:
+            print('Not a valid direction!')
+            invalidInput=True
+            continue
+    elif status == 3.3 or status == 2.2:
+        if invalidInput == False:
+            print('You can travel: (S)outh or (W)est.')
+        direction = str(input('Direction: '))
+        if direction == 's' or direction == 'S':
+            status=round((status-0.1),2)
+            invalidInput=False
+        elif direction == 'w' or direction == 'W':
+            status=round((status-1.0),2)
+            invalidInput=False
+        else:
+            print('Not a valid direction!')
+            invalidInput=True
+            continue
 
-while stadsetning != 3.1:
-
-    if stadsetning == 1.1:
-        print('You can travel: (N)orth.')
-        direction = str(input('Direction: '))
-        while direction == 'S' or direction == 's' or direction =='W' or direction =='w' or direction == 'E' or direction =='e':
-            print('Not a valid direction!')
-            direction = input('Direction: ')
-        else:
-            if direction == 'N' or direction =='n':
-                stadsetning = round((1.1 + 0.1),1)
-    
-    if stadsetning == 1.2:
-        print('You can travel: (N)orth or (E)ast or (S)outh.')
-        direction = str(input('Direction: '))
-        while direction == 'W' or direction == 'w':
-            print('Not a valid direction!')
-            direction = input('Direction: ')
-        else:
-            if direction == 'N' or direction =='n':
-                stadsetning = round((1.2 + 0.1),1)
-            elif direction == 'E' or direction == 'e':
-                stadsetning = round((1.2 + 1.0),1)
-            elif direction == 'S' or direction =='s':
-                stadsetning = round((1.2 - 0.1),1)
-    
-    if stadsetning == 1.3:
-        print('You can travel: (E)ast or (S)outh.')
-        direction = str(input('Direction: '))
-        while direction == 'W' or direction == 'w' or direction == 'N' or direction =='n':
-                print('Not a valid direction!')
-                direction = input('Direction: ')
-        else:
-            if direction == 'E' or direction =='e':
-                stadsetning = round((1.3 + 1.0),1)
-            elif direction == 'S' or direction =='s':
-                stadsetning = round((1.3 - 0.1),1)
-
-    if stadsetning == 2.2:
-        print('You can travel: (S)outh or (W)est.')
-        direction = str(input('Direction: '))
-        while direction == 'E' or direction == 'e' or direction =='N' or direction == 'n':
-            print('Not a valid direction!')
-            direction = input('Direction: ')
-        else:
-            if direction == 'W' or direction =='w':
-                stadsetning = round((2.2 - 1.0),1)
-            elif direction == 'S' or direction =='s':
-                stadsetning = round((2.2 - 0.1),1)
-                
-
-    if stadsetning == 2.1 :
-        print('You can travel: (N)orth.')
-        direction = str(input('Direction: '))
-        while direction == 'S' or direction == 's' or direction == 'W' or direction == 'w' or direction == 'E' or direction == 'e':
-            print('Not a valid direction!')
-            direction = input('Direction: ')
-        else:
-            if direction == 'N' or direction 'n':
-                stadsetning = round((2.1 + 0.1),1)
-    
-    if stadsetning == 2.3:
-        print('You can travel: (E)ast or (W)est.')
-        direction = str(input('Direction: '))
-        while direction == 'N' or direction == 'n' or direction =='S' or direction == 's':
-            print('Not a valid direction!')
-            direction = input('Direction: ')
-        else:
-            if direction == 'W' or direction =='w':
-                stadsetning = round((2.3 - 1.0),1)
-            elif direction == 'E' or direction =='e':
-                stadsetning = round((2.3 + 1.0),1)   
-    
-    if stadsetning == 3.3:
-        print('You can travel: (S)outh or (W)est.')
-        direction = str(input('Direction: '))
-        while direction == 'E' or direction == 'e' or direction =='N' or direction == 'n':
-            print('Not a valid direction!')
-            direction = input('Direction: ')
-        else:
-            if direction == 'W' or direction =='w':
-                stadsetning = round((3.3 - 1.0),1)
-            elif direction == 'S' or direction =='s':
-                stadsetning = round((3.3 - 0.1),1)
-
-    if stadsetning == 3.2:
-        print('You can travel: (N)orth or (S)outh.')
-        direction = str(input('Direction: '))
-        while direction == 'W' or direction == 'w' or direction =='E' or direction == 'e':
-            print('Not a valid direction!')
-            direction = input('Direction: ')
-        else:
-            if direction == 'N' or direction =='n':
-                stadsetning = round((3.2 + 1.0),1)
-            elif direction == 'S' or direction =='s':
-                stadsetning = round((3.2 - 0.1),1)
-
-if stadsetning == 3.1:
-    print('Victory!')
